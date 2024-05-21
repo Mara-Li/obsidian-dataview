@@ -22,7 +22,8 @@
       "es5",
       "scripthost",
       "es2018",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "es2021"
     ]
   },
   "include": [
