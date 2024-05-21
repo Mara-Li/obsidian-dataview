@@ -1,4 +1,4 @@
-import { App, Component, MarkdownRenderer } from "obsidian";
+import { Component, MarkdownRenderer, App } from "obsidian";
 import { DataArray } from "../api/data-array";
 import { QuerySettings } from "../settings";
 import { currentLocale } from "../util/locale";
@@ -41,7 +41,7 @@ async function renderCompactMarkdownForInlineFieldLivePreview(
     const tmpContainer = createSpan();
     await MarkdownRenderer.render(app, markdown, tmpContainer, sourcePath, component);
 
-    let paragraph = tmpContainer.querySelector(":scope > p");
+    const paragraph = tmpContainer.querySelector(":scope > p");
     if (tmpContainer.childNodes.length == 1 && paragraph) {
         container.replaceChildren(...paragraph.childNodes);
     } else {
