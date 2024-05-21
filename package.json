@@ -20,7 +20,7 @@
     "obsidian",
     "dataview"
   ],
-  "author": "Michael Brenan",
+  "author": "Michael Brenan, Lisandra-dev (fork)",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
