@@ -432,6 +432,15 @@ nonnull([null, false]) = [false]
 nonnull([1, 2, 3]) = [1, 2, 3]
 ```
 
+### `firstvalue(array)`
+
+Return the first non-null value from the array, as a single element. This can be used to pick the first defined field in the children of a task/list item, like in `firstvalue(children.myField)`.
+
+```js
+firstvalue([null, 1, 2]) => 1
+firstvalue(children.myField) => If children.myField equals [null, null, "myValue", null], it would return "myValue"
+```
+
 ### `all(array)`
 
 Returns `true` only if ALL values in the array are truthy. You can also pass multiple arguments to this function, in
@@ -510,6 +519,14 @@ Filters elements in an array according to the predicate, returning a new list of
 ```js
 filter([1, 2, 3], (x) => x >= 2) = [2, 3]
 filter(["yes", "no", "yas"], (x) => startswith(x, "y")) = ["yes", "yas"]
+```
+
+### `unique(array)`
+
+Creates a new array with only unique values. 
+
+```js
+unique([1, 3, 7, 3, 1]) => [1, 3, 7]
 ```
 
 ### `map(array, func)`
@@ -702,6 +719,23 @@ is the same as default but is not vectorized.
 ```js
 default(list(1, 2, null), 3) = list(1, 2, 3)
 ldefault(list(1, 2, null), 3) = list(1, 2, null)
+```
+
+### `display()`
+
+Display function converts the input into a string representation while trying to
+preserve the display property of data types.
+This means that links and urls will be replaced by their display value.
+
+
+```js
+display("Hello World") = "Hello World"
+display("**Hello** World") = "Hello World"
+display("[Hello](https://example.com) [[World]]") = "Hello World"
+display(link("path/to/file.md")) = "file"
+display(link("path/to/file.md", "displayname")) = "displayname"
+display(date("2024-11-18")) = "November 18, 2024"
+display(list("Hello", "World")) = "Hello, World"
 ```
 
 ### `choice(bool, left, right)`

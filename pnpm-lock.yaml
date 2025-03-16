@@ -38,6 +38,9 @@ importers:
       preact:
         specifier: ^10.6.5
         version: 10.17.1
+      remove-markdown:
+        specifier: ^0.5.5
+        version: 0.5.5
     devDependencies:
       '@rollup/plugin-commonjs':
         specifier: ^25.0.4
@@ -1405,9 +1408,9 @@ packages:
       '@codemirror/state': ^6.0.0
       '@codemirror/view': ^6.0.0
 
-  obsidian@https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/23947b58d372ea02225324308e31d36b4aa95869:
-    resolution: {tarball: https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/23947b58d372ea02225324308e31d36b4aa95869}
-    version: 1.7.2
+  obsidian@https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/9ab497e64afeac291a2546d2faeded6a7bed626a:
+    resolution: {tarball: https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/9ab497e64afeac291a2546d2faeded6a7bed626a}
+    version: 1.8.7
     peerDependencies:
       '@codemirror/state': ^6.0.0
       '@codemirror/view': ^6.0.0
@@ -1523,6 +1526,9 @@ packages:
 
   react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+
+  remove-markdown@0.5.5:
+    resolution: {integrity: sha512-lMR8tOtDqazFT6W2bZidoXwkptMdF3pCxpri0AEokHg0sZlC2GdoLqnoaxsEj1o7/BtXV1MKtT3YviA1t7rW7g==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -3491,7 +3497,7 @@ snapshots:
 
   obsidian-daily-notes-interface@0.8.4(@codemirror/state@6.2.1)(@codemirror/view@6.19.0):
     dependencies:
-      obsidian: https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/23947b58d372ea02225324308e31d36b4aa95869(@codemirror/state@6.2.1)(@codemirror/view@6.19.0)
+      obsidian: https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/9ab497e64afeac291a2546d2faeded6a7bed626a(@codemirror/state@6.2.1)(@codemirror/view@6.19.0)
       tslib: 2.1.0
     transitivePeerDependencies:
       - '@codemirror/state'
@@ -3504,7 +3510,7 @@ snapshots:
       '@types/codemirror': 5.60.8
       moment: 2.29.4
 
-  obsidian@https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/23947b58d372ea02225324308e31d36b4aa95869(@codemirror/state@6.2.1)(@codemirror/view@6.19.0):
+  obsidian@https://codeload.github.com/obsidianmd/obsidian-api/tar.gz/9ab497e64afeac291a2546d2faeded6a7bed626a(@codemirror/state@6.2.1)(@codemirror/view@6.19.0):
     dependencies:
       '@codemirror/state': 6.2.1
       '@codemirror/view': 6.19.0
@@ -3602,6 +3608,8 @@ snapshots:
   react-is@17.0.2: {}
 
   react-is@18.2.0: {}
+
+  remove-markdown@0.5.5: {}
 
   require-directory@2.1.1: {}
 
