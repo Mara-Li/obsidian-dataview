@@ -1,9 +1,9 @@
-import { App, Component, MarkdownRenderer } from "obsidian";
-import { DataArray } from "api/data-array";
-import { QuerySettings } from "settings";
-import { currentLocale } from "util/locale";
-import { renderMinimalDate, renderMinimalDuration } from "util/normalize";
-import { Literal, Values, Widgets } from "data-model/value";
+import { Component, MarkdownRenderer, App } from "obsidian";
+import { DataArray } from "../api/data-array";
+import { QuerySettings } from "../settings";
+import { currentLocale } from "../util/locale";
+import { renderMinimalDate, renderMinimalDuration } from "../util/normalize";
+import { Literal, Values, Widgets } from "../data-model/value";
 
 /** Render simple fields compactly, removing wrapping content like paragraph and span. */
 export async function renderCompactMarkdown(
@@ -42,7 +42,9 @@ async function renderCompactMarkdownForInlineFieldLivePreview(
     await MarkdownRenderer.render(app, markdown, tmpContainer, sourcePath, component);
     let paragraph = tmpContainer.querySelector(":scope > p");
     if (tmpContainer.childNodes.length == 1 && paragraph) {
-        container.appendChild(paragraph.childNodes.item(paragraph.childNodes.length - 1));
+        while (paragraph.firstChild) {
+            container.appendChild(paragraph.firstChild);
+        }
     } else {
         container.replaceChildren(...tmpContainer.childNodes);
     }
