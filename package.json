@@ -1,6 +1,6 @@
 {
   "name": "@enveloppe/obsidian-dataview",
-  "version": "0.5.70-1",
+  "version": "0.5.70-2",
   "description": "Advanced data views for Obsidian.md.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
