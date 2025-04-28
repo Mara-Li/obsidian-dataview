@@ -4,7 +4,7 @@ export type { DataviewInlineApi, DataviewInlineIOApi } from "./api/inline-api";
 
 // Core Dataview types.
 export type { DateTime, Duration } from "luxon";
-export type {
+export {
     Link,
     DataObject,
     LiteralType,
